@@ -7,6 +7,9 @@
 //
 
 #import "ListViewController.h"
+#import "DataParser.h"
+#import "HotelDataModel.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface ListViewController() <UITableViewDelegate, UITableViewDataSource>
 
@@ -46,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return [DataParser sharedManager].hotels.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,7 +58,14 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"I'm a tableView cell %ld", (long)indexPath.row];
+
+    HotelDataModel *model = (HotelDataModel *)[DataParser sharedManager].hotels[indexPath.row];
+    cell.textLabel.text = model.name;
+
+    UIImageView *myImage = [UIImageView new];
+    [myImage setImageWithURL:model.thumbnailURL placeholderImage:[UIImage imageNamed:@"PlaceHolder"]];
+    myImage.frame = CGRectMake(0, 0, 50, 50);
+    [cell.contentView addSubview:myImage];
     return cell;
 }
 

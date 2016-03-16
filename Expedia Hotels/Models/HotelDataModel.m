@@ -29,4 +29,11 @@
     return self;
 }
 
+- (void)loadImage {
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
+        NSData *data = [NSData dataWithContentsOfURL:self.thumbnailURL];
+        self.thumbnailImage = [[UIImage alloc] initWithData:data];
+    });
+}
+
 @end

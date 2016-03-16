@@ -11,6 +11,6 @@
 @interface DataParser : NSObject
 
 @property (nonatomic, strong) NSArray *hotels;
-+ (id)sharedManager;
++ (DataParser *)sharedManager;
 
 @end

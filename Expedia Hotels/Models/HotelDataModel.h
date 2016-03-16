@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface HotelDataModel : NSObject
 
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) NSString *streetAddress;
 @property (nonatomic, strong) NSURL *thumbnailURL;
 @property (nonatomic) double totalRate;
+@property (nonatomic, strong) UIImage *thumbnailImage;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
