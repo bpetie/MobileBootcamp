@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		153681061C9912AF00D057E2 /* HotelDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 153681051C9912AF00D057E2 /* HotelDataModel.m */; };
 		153681091C99176400D057E2 /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 153681081C99176400D057E2 /* DataParser.m */; };
+		1536810E1C9934F600D057E2 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1536810D1C9934F600D057E2 /* AFNetworking.framework */; };
 		15C702841C9759C000723550 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702831C9759C000723550 /* main.m */; };
 		15C702871C9759C000723550 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702861C9759C000723550 /* AppDelegate.m */; };
 		15C702921C9759C000723550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C702911C9759C000723550 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		153681051C9912AF00D057E2 /* HotelDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelDataModel.m; path = Models/HotelDataModel.m; sourceTree = "<group>"; };
 		153681071C99176400D057E2 /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataParser.h; path = Models/DataParser.h; sourceTree = "<group>"; };
 		153681081C99176400D057E2 /* DataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataParser.m; path = Models/DataParser.m; sourceTree = "<group>"; };
+		1536810D1C9934F600D057E2 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = SOURCE_ROOT; };
 		15C7027F1C9759C000723550 /* Expedia Hotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expedia Hotels.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C702831C9759C000723550 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15C702851C9759C000723550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,12 +44,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1536810E1C9934F600D057E2 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1536810C1C9934CE00D057E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1536810D1C9934F600D057E2 /* AFNetworking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		15C702761C9759C000723550 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +85,7 @@
 				15C702911C9759C000723550 /* Assets.xcassets */,
 				15C702931C9759C000723550 /* LaunchScreen.storyboard */,
 				15C702961C9759C000723550 /* Info.plist */,
+				1536810C1C9934CE00D057E2 /* Frameworks */,
 				15C702821C9759C000723550 /* Supporting Files */,
 			);
 			path = "Expedia Hotels";
@@ -120,6 +132,7 @@
 				15C7027B1C9759C000723550 /* Sources */,
 				15C7027C1C9759C000723550 /* Frameworks */,
 				15C7027D1C9759C000723550 /* Resources */,
+				1536810F1C99355100D057E2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -174,6 +187,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1536810F1C99355100D057E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15C7027B1C9759C000723550 /* Sources */ = {
@@ -289,6 +319,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Expedia Hotels/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Expedia.Expedia-Hotels";
@@ -300,6 +334,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Expedia Hotels/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Expedia.Expedia-Hotels";
