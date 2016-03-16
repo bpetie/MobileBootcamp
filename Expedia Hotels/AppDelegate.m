@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "MapViewController.h"
 #import "ListViewController.h"
-#import "TabBarViewController.h"
+#import "DataParser.h"
 
 @interface AppDelegate ()
 
@@ -24,15 +24,17 @@
     ListViewController *firstController = [ListViewController new];
     MapViewController *secondController = [MapViewController new];
 
-    TabBarViewController *tabBarViewController = [TabBarViewController new];
+    UINavigationController *nav = [UINavigationController new];
+    nav.navigationBar.opaque = YES;
+    [nav addChildViewController:firstController];
 
-    tabBarViewController.viewControllers = @[firstController, secondController];
+    UITabBarController *tabBarViewController = [UITabBarController new];
+
+    tabBarViewController.viewControllers = @[nav, secondController];
     self.window.rootViewController = tabBarViewController;
     [self.window addSubview:tabBarViewController.view];
     [self.window makeKeyAndVisible];
-
-    return YES;
-    // Override point for customization after application launch.
+    [DataParser sharedManager];
     return YES;
 }
 

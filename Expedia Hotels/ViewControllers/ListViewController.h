@@ -10,4 +10,6 @@
 
 @interface ListViewController : UIViewController
 
+@property (nonatomic, strong) UITableView *tableView;
+
 @end

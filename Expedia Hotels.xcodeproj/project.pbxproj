@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153681061C9912AF00D057E2 /* HotelDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 153681051C9912AF00D057E2 /* HotelDataModel.m */; };
+		153681091C99176400D057E2 /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 153681081C99176400D057E2 /* DataParser.m */; };
 		15C702841C9759C000723550 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702831C9759C000723550 /* main.m */; };
 		15C702871C9759C000723550 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702861C9759C000723550 /* AppDelegate.m */; };
-		15C7028D1C9759C000723550 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7028C1C9759C000723550 /* TabBarViewController.m */; };
 		15C702921C9759C000723550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C702911C9759C000723550 /* Assets.xcassets */; };
 		15C702951C9759C000723550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C702931C9759C000723550 /* LaunchScreen.storyboard */; };
 		15C702A01C97825100723550 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 15C7029F1C97825100723550 /* hotels.json */; };
@@ -18,12 +19,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		153681041C9912AF00D057E2 /* HotelDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelDataModel.h; path = Models/HotelDataModel.h; sourceTree = "<group>"; };
+		153681051C9912AF00D057E2 /* HotelDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelDataModel.m; path = Models/HotelDataModel.m; sourceTree = "<group>"; };
+		153681071C99176400D057E2 /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataParser.h; path = Models/DataParser.h; sourceTree = "<group>"; };
+		153681081C99176400D057E2 /* DataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataParser.m; path = Models/DataParser.m; sourceTree = "<group>"; };
 		15C7027F1C9759C000723550 /* Expedia Hotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expedia Hotels.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C702831C9759C000723550 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15C702851C9759C000723550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15C702861C9759C000723550 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15C7028B1C9759C000723550 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ViewControllers/TabBarViewController.h; sourceTree = "<group>"; };
-		15C7028C1C9759C000723550 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ViewControllers/TabBarViewController.m; sourceTree = "<group>"; };
 		15C702911C9759C000723550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15C702941C9759C000723550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15C702961C9759C000723550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +91,10 @@
 		15C702A11C97827D00723550 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				153681041C9912AF00D057E2 /* HotelDataModel.h */,
+				153681051C9912AF00D057E2 /* HotelDataModel.m */,
+				153681071C99176400D057E2 /* DataParser.h */,
+				153681081C99176400D057E2 /* DataParser.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -97,8 +104,6 @@
 			children = (
 				15C702A31C97856900723550 /* MapViewController.h */,
 				15C702A41C97856900723550 /* MapViewController.m */,
-				15C7028B1C9759C000723550 /* TabBarViewController.h */,
-				15C7028C1C9759C000723550 /* TabBarViewController.m */,
 				15C702A61C9785AB00723550 /* ListViewController.h */,
 				15C702A71C9785AB00723550 /* ListViewController.m */,
 			);
@@ -176,9 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C702A81C9785AB00723550 /* ListViewController.m in Sources */,
-				15C7028D1C9759C000723550 /* TabBarViewController.m in Sources */,
 				15C702871C9759C000723550 /* AppDelegate.m in Sources */,
+				153681061C9912AF00D057E2 /* HotelDataModel.m in Sources */,
 				15C702841C9759C000723550 /* main.m in Sources */,
+				153681091C99176400D057E2 /* DataParser.m in Sources */,
 				15C702A51C97856900723550 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +326,7 @@
 				15C7029B1C9759C000723550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
