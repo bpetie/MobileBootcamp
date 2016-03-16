@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  MapViewController.h
 //  Expedia Hotels
 //
 //  Created by Brian Peterman on 3/14/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface MapViewController : UIViewController
 
 @end
-

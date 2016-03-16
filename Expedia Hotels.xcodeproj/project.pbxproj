@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		15C702841C9759C000723550 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702831C9759C000723550 /* main.m */; };
 		15C702871C9759C000723550 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702861C9759C000723550 /* AppDelegate.m */; };
-		15C7028A1C9759C000723550 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702891C9759C000723550 /* FirstViewController.m */; };
-		15C7028D1C9759C000723550 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7028C1C9759C000723550 /* SecondViewController.m */; };
-		15C702901C9759C000723550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C7028E1C9759C000723550 /* Main.storyboard */; };
+		15C7028D1C9759C000723550 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7028C1C9759C000723550 /* TabBarViewController.m */; };
 		15C702921C9759C000723550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C702911C9759C000723550 /* Assets.xcassets */; };
 		15C702951C9759C000723550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C702931C9759C000723550 /* LaunchScreen.storyboard */; };
+		15C702A01C97825100723550 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 15C7029F1C97825100723550 /* hotels.json */; };
+		15C702A51C97856900723550 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702A41C97856900723550 /* MapViewController.m */; };
+		15C702A81C9785AB00723550 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C702A71C9785AB00723550 /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +22,16 @@
 		15C702831C9759C000723550 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15C702851C9759C000723550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15C702861C9759C000723550 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15C702881C9759C000723550 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		15C702891C9759C000723550 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		15C7028B1C9759C000723550 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		15C7028C1C9759C000723550 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		15C7028F1C9759C000723550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15C7028B1C9759C000723550 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ViewControllers/TabBarViewController.h; sourceTree = "<group>"; };
+		15C7028C1C9759C000723550 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ViewControllers/TabBarViewController.m; sourceTree = "<group>"; };
 		15C702911C9759C000723550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15C702941C9759C000723550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15C702961C9759C000723550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15C7029F1C97825100723550 /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
+		15C702A31C97856900723550 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ViewControllers/MapViewController.h; sourceTree = "<group>"; };
+		15C702A41C97856900723550 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ViewControllers/MapViewController.m; sourceTree = "<group>"; };
+		15C702A61C9785AB00723550 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ViewControllers/ListViewController.h; sourceTree = "<group>"; };
+		15C702A71C9785AB00723550 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ViewControllers/ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +64,10 @@
 		15C702811C9759C000723550 /* Expedia Hotels */ = {
 			isa = PBXGroup;
 			children = (
+				15C702A21C97829100723550 /* ViewControllers */,
+				15C702A11C97827D00723550 /* Models */,
 				15C702851C9759C000723550 /* AppDelegate.h */,
 				15C702861C9759C000723550 /* AppDelegate.m */,
-				15C702881C9759C000723550 /* FirstViewController.h */,
-				15C702891C9759C000723550 /* FirstViewController.m */,
-				15C7028B1C9759C000723550 /* SecondViewController.h */,
-				15C7028C1C9759C000723550 /* SecondViewController.m */,
-				15C7028E1C9759C000723550 /* Main.storyboard */,
 				15C702911C9759C000723550 /* Assets.xcassets */,
 				15C702931C9759C000723550 /* LaunchScreen.storyboard */,
 				15C702961C9759C000723550 /* Info.plist */,
@@ -80,8 +80,29 @@
 			isa = PBXGroup;
 			children = (
 				15C702831C9759C000723550 /* main.m */,
+				15C7029F1C97825100723550 /* hotels.json */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15C702A11C97827D00723550 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		15C702A21C97829100723550 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				15C702A31C97856900723550 /* MapViewController.h */,
+				15C702A41C97856900723550 /* MapViewController.m */,
+				15C7028B1C9759C000723550 /* TabBarViewController.h */,
+				15C7028C1C9759C000723550 /* TabBarViewController.m */,
+				15C702A61C9785AB00723550 /* ListViewController.h */,
+				15C702A71C9785AB00723550 /* ListViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C702A01C97825100723550 /* hotels.json in Resources */,
 				15C702951C9759C000723550 /* LaunchScreen.storyboard in Resources */,
 				15C702921C9759C000723550 /* Assets.xcassets in Resources */,
-				15C702901C9759C000723550 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,24 +175,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15C7028D1C9759C000723550 /* SecondViewController.m in Sources */,
+				15C702A81C9785AB00723550 /* ListViewController.m in Sources */,
+				15C7028D1C9759C000723550 /* TabBarViewController.m in Sources */,
 				15C702871C9759C000723550 /* AppDelegate.m in Sources */,
-				15C7028A1C9759C000723550 /* FirstViewController.m in Sources */,
 				15C702841C9759C000723550 /* main.m in Sources */,
+				15C702A51C97856900723550 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		15C7028E1C9759C000723550 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15C7028F1C9759C000723550 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		15C702931C9759C000723550 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

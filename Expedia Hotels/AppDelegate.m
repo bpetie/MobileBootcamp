@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MapViewController.h"
+#import "ListViewController.h"
+#import "TabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +19,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+
+    ListViewController *firstController = [ListViewController new];
+    MapViewController *secondController = [MapViewController new];
+
+    TabBarViewController *tabBarViewController = [TabBarViewController new];
+
+    tabBarViewController.viewControllers = @[firstController, secondController];
+    self.window.rootViewController = tabBarViewController;
+    [self.window addSubview:tabBarViewController.view];
+    [self.window makeKeyAndVisible];
+
+    return YES;
     // Override point for customization after application launch.
     return YES;
 }
